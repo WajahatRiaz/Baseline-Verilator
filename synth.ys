@@ -1,0 +1,6 @@
+read -sv ./src/dut.sv
+hierarchy -top dut
+write_rtlil
+techmap; opt;
+show
+write_verilog synth.txt
